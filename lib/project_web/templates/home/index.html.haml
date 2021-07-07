@@ -1,0 +1,14 @@
+%h2.center List of words
+
+%table.centered
+  %thead 
+    %tr 
+      %th English 
+      %th Russian 
+  %tbody
+    = for word <- @words do
+      %tr
+        %td= link word.eng, to: Routes.home_path(@conn, :show, word)
+        %td= link word.rus, to: Routes.home_path(@conn, :show, word)
+        -# %td Edit 
+        -# %td Delete 
