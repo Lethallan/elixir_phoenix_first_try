@@ -20,7 +20,7 @@ defmodule Project.MixProject do
   def application do
     [
       mod: {Project.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :httpotion, :httpoison]
     ]
   end
 
@@ -45,7 +45,9 @@ defmodule Project.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:phoenix_haml, "~> 0.2"}
+      {:phoenix_haml, "~> 0.2"},
+      {:httpotion, "~> 3.1.0"},
+      {:httpoison, "~> 1.8"}
     ]
   end
 
