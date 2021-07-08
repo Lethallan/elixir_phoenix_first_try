@@ -20,7 +20,7 @@ defmodule Project.MixProject do
   def application do
     [
       mod: {Project.Application, []},
-      extra_applications: [:logger, :runtime_tools, :httpotion, :httpoison]
+      extra_applications: [:logger, :runtime_tools, :httpotion, :httpoison, :bamboo, :bamboo_smtp]
     ]
   end
 
@@ -47,7 +47,9 @@ defmodule Project.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:phoenix_haml, "~> 0.2"},
       {:httpotion, "~> 3.1.0"},
-      {:httpoison, "~> 1.8"}
+      {:httpoison, "~> 1.8"},
+      {:bamboo, "~> 2.1.0"},
+      {:bamboo_smtp, "~> 4.0.1"}
     ]
   end
 
