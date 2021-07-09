@@ -1,0 +1,9 @@
+%h1.center New word 
+
+= form_for @changeset, Routes.home_path(@conn, :create), fn f ->
+  = text_input f, :eng, placeholder: "english word", class: "form-control"
+  = error_tag f, :eng
+  = text_input f, :rus, placeholder: "перевод", class: "form-control"
+  = error_tag f, :rus
+  = submit "create", class: "btn btn-primary green"
+  = end

@@ -16,8 +16,17 @@ defmodule ProjectWeb.Router do
   scope "/", ProjectWeb do
     pipe_through :browser
 
-    get "/", HomeController , :index
-    get "/:id", HomeController , :show
+    resources "/", HomeController #, only: [:index, :show]
+    # get "/", HomeController, :index
+
+    # get "/new", HomeController, :new
+    # post "/", HomeController, :create
+
+    # get "/:id", HomeController, :show
+    # delete "/:id", HomeController, :delete
+
+    # get "/:id/edit", HomeController, :edit
+    # put "/:id", HomeController, :update
   end
 
   # Other scopes may use custom stacks.
