@@ -1,0 +1,9 @@
+%h1.center Edit word 
+
+= form_for @changeset, Routes.home_path(@conn, :update, @word), fn f ->
+  = text_input f, :eng, placeholder: @word.eng, class: "form-control"
+  = error_tag f, :eng
+  = text_input f, :rus, placeholder: @word.rus, class: "form-control"
+  = error_tag f, :rus
+  = submit "update", class: "btn btn-primary blue"
+  = end

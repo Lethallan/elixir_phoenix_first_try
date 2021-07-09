@@ -1,6 +1,8 @@
 = @joke
 
 %h2.center List of words
+%p.center
+  = link "Add a new word", to: Routes.home_path(@conn, :new), class: "btn btn-secondary green"
 
 %table.centered
   %thead 
@@ -12,5 +14,5 @@
       %tr
         %td= link word.eng, to: Routes.home_path(@conn, :show, word)
         %td= link word.rus, to: Routes.home_path(@conn, :show, word)
-        -# %td Edit 
-        -# %td Delete 
+        -# %td= link "Edit", to: Routes.home_path(@conn, :edit, word), class: "btn btn-primary blue"
+        -# %td= link "Delete", to: Routes.home_path(@conn, :delete, word), method: :delete, class: "btn btn-primary red"

@@ -1,4 +1,7 @@
-%h3.center Look at this word
+.center
+  %h3 Look at this word
+  = link "Edit", to: Routes.home_path(@conn, :edit, @word), class: "btn btn-primary blue"
+  -# = link "Delete", to: Routes.home_path(@conn, :delete, @word), method: :delete, class: "btn btn-primary red"
 
 %table.centered
   %thead
